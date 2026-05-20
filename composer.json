@@ -19,17 +19,19 @@
         }
     ],
     "require": {
-        "php": "^8.3",
-        "monolog/monolog": "^3.9",
-        "symfony/serializer": "^6.0 || ^7.0 || ^8.0"
+        "php": "^8.4",
+        "monolog/monolog": "^3.1",
+        "symfony/serializer": "^8.0",
+        "symfony/var-dumper": "^8.0",
+        "webmozart/assert": "^2.3"
     },
     "require-dev": {
         "roave/security-advisories": "dev-latest",
         "phpstan/phpstan": "^2.1",
-        "rector/rector": "^2.2",
-        "lendable/composer-license-checker": "^1.2",
+        "rector/rector": "^2.4",
+        "lendable/composer-license-checker": "^1.4",
         "shipmonk/composer-dependency-analyser": "^1.8",
-        "friendsofphp/php-cs-fixer": "^3.88"
+        "friendsofphp/php-cs-fixer": "^3.95"
     },
     "autoload": {
         "psr-4": {

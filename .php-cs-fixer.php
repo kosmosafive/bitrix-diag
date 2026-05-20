@@ -13,12 +13,12 @@ $finder = PhpCsFixer\Finder::create()
     )
     ->notPath('/lang/');
 
-return (new PhpCsFixer\Config())
+return new PhpCsFixer\Config()
     ->setParallelConfig(PhpCsFixer\Runner\Parallel\ParallelConfigFactory::detect())
     ->setRiskyAllowed(true)
     ->setRules(
         [
-            '@PHP83Migration' => true,
+            '@PHP84Migration' => true,
             '@PSR12' => true,
             'array_syntax' => ['syntax' => 'short'],
             'blank_line_after_namespace' => true,
