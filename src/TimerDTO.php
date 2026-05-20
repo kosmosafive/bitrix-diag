@@ -4,36 +4,21 @@ declare(strict_types=1);
 
 namespace Kosmosafive\Bitrix\Diag;
 
-readonly class TimerDTO
+final readonly class TimerDTO
 {
     public function __construct(
-        protected float $start,
-        protected float $end,
-        protected float $duration
+        public float $start,
+        public float $end,
+        public float $duration
     ) {
     }
 
-    public function getStart(): float
+    public static function createFromTimer(Timer $timer): self
     {
-        return $this->start;
-    }
-
-    public function getEnd(): float
-    {
-        return $this->end;
-    }
-
-    public function getDuration(): float
-    {
-        return $this->duration;
-    }
-
-    public static function createFromTimer(Timer $timer): TimerDTO
-    {
-        return new TimerDTO(
-            $timer->getStart(),
-            $timer->getEnd(),
-            $timer->getDuration()
+        return new self(
+            $timer->start,
+            $timer->end,
+            $timer->duration
         );
     }
 }
